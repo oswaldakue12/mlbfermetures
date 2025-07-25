@@ -1,0 +1,513 @@
+body{
+    background-color:  black;
+    font-family: system-ui ;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header{
+    background: url(/icon/header_bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.header_nav {
+    background-color: rgba(243, 178, 109);
+}
+
+
+.contact {
+    background: none;
+    border: 0;
+    margin-top: 0;
+    color: white;
+    padding: 10px;
+    font-size: 120%;
+}
+
+.title {
+    margin-top: 0;
+    font-weight: 900;
+    padding: 15px;
+    color: white;
+}
+
+.header_button {
+    opacity: 1;
+    background: none;
+    border: 0;
+    /*color: white;*/
+    width: 250px;
+    height: 45px;
+    font-weight: 700;
+    transition: opacity .2s;
+}
+
+.header_button:hover {
+    opacity: .6;
+}
+
+.header_button_devis {
+    background-color: #f3b26d;
+    border: 0;
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    transition: opacity .2s;
+}
+
+.header_button_devis:hover {
+    opacity: .6;
+}
+
+
+.description {
+    color: white;
+    text-align: center;
+}
+
+.x-line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.y-line {
+    background-color: white;
+    width: 1px;
+    height: 800px;
+    margin: 50px;
+}
+
+.services {
+    background-color: #f3b26d;
+    text-align: center;
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.gallery_link {
+    width: 650px;
+    height: 650px;
+}
+
+.section {
+    margin: auto;
+    position: relative;
+    background:none;
+    border: 0;
+    margin-left: 50px;
+    color: black;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section:hover .slideOnHover {
+    transform: translate(0%, -116%);
+    width: 638px; 
+}
+
+.slideOnHover {
+    position: absolute;
+    margin: auto;
+    background-color: rgba(243, 178, 109, 0.8);
+    width: 550px;
+    height: 60px;
+    object-fit: contain;
+    transform: translate(-2.5%, -116%) scaleX(95%); 
+    transition: width .2s ease, transform .4s ease;   
+}
+
+
+.section_text {
+    margin: auto;
+    color: white;
+    padding-right: 100px;
+    text-align: justify;
+    padding-top: 180px;
+}
+
+.section_text_title {
+    opacity: .5;
+}
+
+.section_text_paragraph {
+    text-align: justify;
+} 
+
+.button_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: box-shadow .2s;
+}
+
+footer {
+    background-color: #f3b26d;
+    text-align: center;
+    height: 30px;
+}
+
+.section_button {
+    display: inline-block;
+    background-color: #f3b26d;
+    color: black;
+    margin-bottom: 50px;
+    border: 0;
+    width: 350px;
+    height: 40px;
+    border-radius: 15px;
+    transition: opacity .2s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.section_button:hover {
+    opacity: .6;
+}
+
+.devis {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    margin: auto;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+.input {
+    background-color: rgb(39, 39, 39);
+    color: #f3b26d;
+    border: 0;
+    width: 250px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.checkbox {
+    background-color: #f3b26d;
+    color: #f3b26d;
+}
+
+.date {
+    background-color: rgb(39, 39, 39); 
+    border: 0; 
+    width: 250px; 
+    height: 25px; 
+    color: grey;
+}
+
+.submit {
+    background-color: #f3b26d;
+    border: 0; width: 250px; 
+    height: 25px; 
+    border-radius: 10px;
+}
+
+
+
+.arrow_text {
+ transition: transform .2s ease;
+}
+
+.arrow_text:hover {
+    transform: translateX(-30px);
+}
+
+.list {
+    color: #f3b26d;
+}
+
+    /*MediaQuery mobile*/
+@media only screen and (max-width: 600px){
+
+    header{
+        background-size: 100% 50%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .contact {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 140%;
+    }
+
+    .header_button_devis {
+            width: 40%;
+    }
+
+    .title {
+        width: 88%;
+        padding-right: 25px;
+        padding-bottom: 8px;
+    }
+
+    .header_nav {
+    background-color: rgba(243, 178, 109, 1);
+    margin: 0;
+    }
+
+    .header_button {
+        width: 100%;
+        border-bottom: 1px solid black ;  
+    }
+
+    .description {
+        margin: 5px;
+        font-size: 80%;
+        text-align: justify;
+    }
+
+    .x-line {
+        width: 100%;
+        height: 1px;
+        background-color: white;
+    }
+
+    .services {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sections {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        background:none;
+        border: 0;
+        color: black;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .gallery_link {
+        margin: auto;
+        width: 100%;
+        height: 10%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slideOnHover {
+        width: 90%;
+    }
+
+    .section_text {
+        margin: auto;
+        width: 90%;
+        padding-right: 0;
+        padding-top: 10px;
+    }
+
+    .section_button {
+        background-color: #f3b26d;
+        margin-bottom: 10px;
+        border: 0;
+        width: 100%;
+        height: 40px;
+        border-radius: 15px;
+        transition: opacity .2s;
+    }
+
+    .arrow_text {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        font-size: 78%;
+    }
+
+}
+
+    /*MediaQuery tablet*/
+@media only screen and (min-width: 600px) and (max-width:1024px){
+
+    header{
+        background-size: 100% 60%;
+        text-align: center;
+        margin-bottom: 0;
+        height: 60%;
+    }
+
+    .contact {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 110%;
+    }
+
+    .header_button_devis {
+            width: 40%;
+            font-size: 130%;
+    }
+
+    .title {
+        width: 88%;
+        padding-right: 25px;
+        padding-bottom: 8px;
+    }
+
+    .header_nav {
+    background-color: rgba(243, 178, 109, 1);
+    margin: 0;
+    margin-bottom: 10px;
+    }
+
+    .header_button {
+        width: 100%;
+        border-bottom: 1px solid black ; 
+        font-size: 140%;
+    }
+
+    .description {
+        padding: 10px;
+        margin: 15px;
+        font-size: 160%;
+        text-align: justify;
+    }
+
+    .x-line {
+        margin: auto;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+    }
+
+    .services {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sections {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        background:none;
+        border: 0;
+        color: black;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .gallery_link {
+        margin: auto;
+        width: 100%;
+        height: 10%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slideOnHover {
+        width: 90%;
+        font-size: 130%;
+    }
+
+    .section_text {
+        margin: auto;
+        width: 90%;
+        padding-right: 0;
+        padding-top: 10px;
+        font-size: 160%;
+    }
+
+    .section_button {
+        margin-bottom: 10px;
+        border: 0;
+        width: 100%;
+        height: 40px;
+        border-radius: 15px;
+        transition: opacity .2s;
+        font-size: 100%;
+    }
+
+    .devis {
+        margin-bottom: 20px;
+    }
+
+    form {
+        font-size: 120%;
+    }
+
+    .input {
+        width: 90%;
+        height: 10%;
+        font-size: 100%;
+    }
+
+    .date {
+        width: 40%;
+        height: 10%;
+        font-size: 100%;
+    }
+
+    .submit {
+        width: 40%;
+        height: 10%;
+        font-size: 100%;
+        border-radius: 20px;
+    }
+
+
+    footer {
+        margin-top: 200px;
+        width: 100%;
+        font-size: 100%;
+    }
+
+}
+
+    /*MediaQuery large tablet*/
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    header{
+        height: 70%;
+        background-size: 100% 70%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .contact {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .header_button_devis {
+        width: 40%;
+        font-size: 130%;
+    }
+
+        .header_button {
+        width: 100%;
+        border-bottom: 1px solid black ; 
+        font-size: 120%;
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="MLB Entreprise spécialisée en pose de fenêtres, parquets, portes et placo plâtre. Services sur mesure près de Quimper. Plaquiste, artisan menusier. Contactez-nous pour un devis.">
+    <title>MLB Entreprise, Pose de fenêtres, parquets, portes, placo plâtre</title>
+    <link rel="stylesheet" href="/styles_gallery.css">
+    <link rel="icon" href="/icon/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <button class="contact"> Contact : +33 6 62 61 84 98</button> <br>
+        <button class="header_button_devis" data-target="devis"> Faire Un Devis </button> <br>
+
+        <img class="title" src="/icon/logo.png" alt="">
+        
+       <!-- <h1 class="title"> MLB Entreprise </h1> --> 
+        <nav class="header_nav">
+            <a href="/accueil.html">
+                <button class="header_button"> Accueil </button>
+            </a>
+            
+        </nav>
+    </header>
+
+
+    <div class="content">
+
+            <div class="description">
+            <h3> Collection de chantiers de pose de fenêtres</h3>
+            <p> </p>
+        </div>
+       
+        <div class="grid">
+            <!-- item -->
+            <div class="item">
+                <img src="/icon/fenetre1_collection/fenetre1.webp" alt="Collection_icon" onclick="openPopup()">
+                <div class="indication"> <strong> Voir plus d'images </strong></div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="details">
+                        <p class="details"> Pose de fenêtre à (nom de ville) <br>
+                            Durée du chantier : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Période :</p>
+                </div>
+                        <div class="x-line"></div>
+                <div class="popup_grid">
+                    <img class="popup_image" src="/icon/fenetre1_collection/01.webp" alt="image1">
+                    <img class="popup_image" src="/icon/fenetre1_collection/02.webp" alt="image2">
+                </div>
+            </div>
+
+            <!-- item -->
+            <div class="item">
+                <img src="/icon/fenetre2_collection/fenetre2.webp" alt="Collection_icon" onclick="openPopup()">
+                <div class="indication"> <strong> Voir plus d'images </strong></div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="details">
+                        <p style="width: 100%; height: 50px; background-color: #f3b26d;"> Pose de fenêtre à (nom de ville) <br>
+                            Durée du chantier : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Période : </p>
+                </div>
+                        <div class="x-line"></div>
+                <div class="popup_grid">
+                    <img class="popup_image" src="/icon/fenetre2_collection/01.webp" alt="image1">
+                    <img class="popup_image" src="/icon/fenetre2_collection/02.webp" alt="image2">
+                    <img class="popup_image" src="/icon/fenetre2_collection/03.webp" alt="image3">
+                    <img class="popup_image" src="/icon/fenetre2_collection/04.webp" alt="image4">
+                    <img class="popup_image" src="/icon/fenetre2_collection/05.webp" alt="image5">
+                </div>
+            </div>
+
+        </div>
+                    <!-- Popup script  -->
+        <script>
+                    // Get all images inside .item
+                const itemImages = document.querySelectorAll('.item img');
+                const popups = document.querySelectorAll('.popup');
+
+                itemImages.forEach((img, index) => {
+                        img.addEventListener('click', () => {
+                    popups[index].style.display = 'block';
+                });
+            });
+                    // Close popups on click outside
+                window.addEventListener('click', (event) => {
+                popups.forEach((popup) => {
+                    if (event.target === popup) {
+                        popup.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+
+                    <!-- Scroll script  -->   
+        <script>
+               const headerButtons = document.querySelectorAll('.header_button, .header_button_devis');
+
+        headerButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        </script>
+
+        <div class="x-line"></div>
+
+        <h2 style="color: white; text-align: center;"> Faire Un Devis </h2>
+        <p style="color: white; text-align: center;"> Villes d'intervention dans un rayon de 100km de Quimper</p>
+
+        <div class="devis" id="devis">
+            
+           <form action="/envoi_mail.php" method="post">
+                <input class="input"  type="text" name="name" id="name" autocomplete="name" placeholder="Nom">
+                <input class="input"  type="text" name="telephone" id="telephone" autocomplete="tel" placeholder="Téléphone">
+                <input class="input"  type="text" name="mail" id="mail" autocomplete="email" placeholder="Mail"> <br><br>
+
+                        <input class="checkbox"  type="checkbox" id="fenetres" name="fenetres">
+                        <label for="fenetres" style="color: #f3b26d;"> Fenêtres </label>
+
+                        <input class="checkbox"  type="checkbox" id="parquets" name="parquets">
+                        <label for="parquets" style="color: #f3b26d;"> Parquets </label>
+
+                        <input class="checkbox"  type="checkbox" id="portes" name="portes">
+                        <label for="portes" style="color: #f3b26d;"> Portes </label>
+
+                        <input class="checkbox"  type="checkbox" id="placo-faux-plafonds" name="placo-faux-Plafonds">
+                        <label for="placo-faux-plafonds" style="color: #f3b26d;"> Placo (Faux-Plafonds) </label>  
+
+                        <input class="checkbox"  type="checkbox" id="placo-isolation" name="placo-isolation">
+                        <label for="placo-isolation" style="color: #f3b26d;"> Placo (Isolation) </label>
+
+                        <input class="checkbox"  type="checkbox" id="placo-doublages" name="placo-doublages">
+                        <label for="placo-doublages" style="color: #f3b26d;"> Placo (Doublages) </label> <br><br>
+
+                        <input class="input"  type="text" name="surface" id="surface" placeholder="Surface" autocomplete="off"> <br><br>
+
+                        <input class="input" type="input" name="ville" id="ville" placeholder="Saisissez Votre Ville..." autocomplete="address-level2">  <br> <br>                
+
+                        <input class="date" type="date" id="date" name="date" autocomplete="off"> <br><br>
+
+                        <input class="submit" type="submit" value="Envoyer">
+           </form>
+        </div>
+    </div>
+
+    <footer>
+            <p style="text-align: justify; text-align: center;"> <strong> MLB Entreprise </strong>  <br> <strong> Adresse : </strong> 00_rue_00000_ville &nbsp;&nbsp;&nbsp;&nbsp; <strong> Mail : </strong> mickael.lbh@gmail.com  &nbsp;&nbsp;&nbsp;&nbsp; <strong> Téléphone : </strong> +33 6 62 61 84 98 </p>
+    </footer>
+</body>
+</html>
+
